@@ -135,22 +135,29 @@ export default class App extends Component {
     return (
       <div className="browser-history-bg-container">
         <div className="browser-history-search-container">
-          <h1 className="browser-history-header">
-            HIST
-            <span className="browser-history-header-character-logo-container">
-              <img
-                className="browser-history-header-character-logo-img"
-                src="https://assets.ccbp.in/frontend/react-js/history-website-logo-img.png"
-                alt="app logo"
-              />
-            </span>
-            RY
-          </h1>
+          <div className="browser-history-logo-container">
+            <img
+              className="browser-history-logo-img"
+              src="https://assets.ccbp.in/frontend/react-js/history-website-logo-img.png"
+              alt="app logo"
+            />
+          </div>
           <div className="browser-history-search-bar-container">
-              <div className="browser-history-search-icon-container">
-                  <img className="browser-history-search-icon-img" src="https://assets.ccbp.in/frontend/react-js/search-img.png" alt="search" />
-              </div>
-              <input type="search" className="browser-history-search-input" placeholder="Search History" name="search-input" value={browserHistorySearchString} onChange={this.onBrowserHistorySearchInputChange} />
+            <div className="browser-history-search-icon-container">
+              <img
+                className="browser-history-search-icon-img"
+                src="https://assets.ccbp.in/frontend/react-js/search-img.png"
+                alt="search"
+              />
+            </div>
+            <input
+              type="search"
+              className="browser-history-search-input"
+              placeholder="Search History"
+              name="search-input"
+              value={browserHistorySearchString}
+              onChange={this.onBrowserHistorySearchInputChange}
+            />
           </div>
         </div>
         <div className="browser-history-content-container">
