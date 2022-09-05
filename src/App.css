@@ -15,7 +15,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
-  width: 100vw;
+  width: 100%;
   padding: 0;
   margin: 0;
 }
@@ -187,7 +187,7 @@ body {
   }
 
   .browser-history-logo-container {
-    margin-right: 18rem;
+    margin-right: 18vw;
   }
 
   .browser-history-logo-img {
@@ -225,7 +225,7 @@ body {
     padding: 0.75rem;
     color: #ffffff;
     border: none;
-    width: 35rem;
+    width: 35vw;
     outline: none;
     font-size: 1rem;
     height: 100%;
@@ -234,7 +234,7 @@ body {
   .browser-history-content-container {
     height: 88vh;
     padding: 1rem 1.5rem;
-    width: 100vw;
+    width: 100%;
   }
 
   .browser-history-empty-content-text {
