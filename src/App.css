@@ -101,7 +101,7 @@ body {
 
 .browser-history-items-container {
   background-color: #ffffff;
-  padding: 1.5rem;
+  padding: 1rem 1.5rem;
   border-radius: 0.4rem;
   box-shadow: 0 0 1.5rem #ececec;
   display: flex;
@@ -113,59 +113,68 @@ body {
 
 .browser-history-single-item-container {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   margin-bottom: 1.5rem;
 }
 
 .browser-history-item-log-time {
   color: #475569;
   font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
 }
 
 .browser-history-item-data-and-action-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  flex-grow: 1;
+  align-items: flex-start;
+  width: 100%;
 }
 
 .browser-history-item-data-container {
   display: flex;
-  align-items: center;
   flex-grow: 1;
 }
 
 .browser-history-item-domain-logo {
-  height: 2.5rem;
-  width: 2.5rem;
-  margin-right: 1.5rem;
+  height: 1.8rem;
+  width: 1.8rem;
+  margin-right: 1rem;
+  margin-top: 0;
 }
 
 .browser-history-item-domain-details-container {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .browser-history-item-domain-title {
   color: #475569;
   font-size: 1rem;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .browser-history-item-domain-name {
   color: #64748b;
   font-size: 0.8rem;
+  margin-top: 0;
 }
 
 .browser-history-item-delete-action-container {
   display: flex;
   align-items: center;
+  background: inherit;
+  border: none;
+  outline: none;
 }
 
 .browser-history-item-delete-icon-img {
-  height: 1.2rem;
-  width: 1.2rem;
+  height: 1.3rem;
+  width: 1.3rem;
 }
 
 @media (min-width: 768px) {
@@ -288,7 +297,6 @@ body {
   .browser-history-item-delete-action-container {
     display: flex;
     align-items: center;
-    background: inherit;
   }
 
   .browser-history-item-delete-icon-img {
