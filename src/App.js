@@ -103,7 +103,7 @@ const BrowserHistoryItem = props => {
           </div>
         </div>
         <button
-          testid="delete"
+          //   testid="delete"
           type="button"
           className="browser-history-item-delete-action-container"
           onClick={onDeleteBrowserHistoryItem}
