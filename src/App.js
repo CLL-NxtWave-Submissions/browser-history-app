@@ -103,6 +103,7 @@ const BrowserHistoryItem = props => {
           </div>
         </div>
         <button
+          testid="delete"
           type="button"
           className="browser-history-item-delete-action-container"
           onClick={onDeleteBrowserHistoryItem}
@@ -227,9 +228,9 @@ export default class App extends Component {
         </div>
         <div className="browser-history-content-container">
           {searchSpecificBrowserHistoryItemList.length === 0 ? (
-            <h1 className="browser-history-empty-content-text">
+            <p className="browser-history-empty-content-text">
               There is no history to show
-            </h1>
+            </p>
           ) : (
             <ul className="browser-history-items-container">
               {searchSpecificBrowserHistoryItemList.map(
