@@ -1,3 +1,4 @@
+import {Component} from 'react'
 import './App.css'
 
 // These are the list used in the application. You can move them to any component needed.
@@ -77,6 +78,143 @@ const initialHistoryList = [
 ]
 
 // Replace your code here
-const App = () => <div>Hello World</div>
+export default class App extends Component {
+  state = {
+    browserHistorySearchString: '',
+    browserHistoryItemList: initialHistoryList,
+    searchSpecificBrowserHistoryItemList: initialHistoryList,
+  }
 
-export default App
+  onBrowserHistorySearchInputChange = searchInputChangeEvent => {
+    const userSearchInput = searchInputChangeEvent.target.value
+
+    this.setState(previousBrowserHistorySearchState => {
+      const {browserHistoryItemList} = previousBrowserHistorySearchState
+
+      const matchingBrowserHistoryItemList = browserHistoryItemList.filter(
+        currentBrowserHistoryItem => {
+          const lowerCaseBrowserHistoryItemTitle = currentBrowserHistoryItem.title.toLowerCase()
+          const lowerCaseUserSearchInput = userSearchInput.toLowerCase()
+
+          return lowerCaseBrowserHistoryItemTitle.includes(
+            lowerCaseUserSearchInput,
+          )
+        },
+      )
+
+      return {
+        browserHistorySearchString: userSearchInput,
+        searchSpecificBrowserHistoryItemList: matchingBrowserHistoryItemList,
+      }
+    })
+  }
+
+  onBrowserHistoryItemDeleteAction = browserHistoryItemDeleteEvent => {
+    const browserHistoryItemIdForDeleteAction =
+      browserHistoryItemDeleteEvent.target.id
+
+    this.setState(previousBrowserHistorySearchState => {
+      const {browserHistoryItemList} = previousBrowserHistorySearchState
+      const browserHistoryItemListExcludingDeleteItemId = browserHistoryItemList.filter(
+        currentBrowserHistoryItem =>
+          currentBrowserHistoryItem.id !== browserHistoryItemIdForDeleteAction,
+      )
+
+      return {
+        browserHistoryItemList: browserHistoryItemListExcludingDeleteItemId,
+      }
+    })
+  }
+
+  render() {
+    const {
+      browserHistorySearchString,
+      searchSpecificBrowserHistoryItemList,
+    } = this.state
+
+    return (
+      <div className="browser-history-bg-container">
+        <div className="browser-history-search-container">
+          <h1 className="browser-history-header">
+            HIST
+            <span className="browser-history-header-character-logo-container">
+              <img
+                className="browser-history-header-character-logo-img"
+                src="https://assets.ccbp.in/frontend/react-js/history-website-logo-img.png"
+                alt="app logo"
+              />
+            </span>
+            RY
+          </h1>
+          <div className="browser-history-search-bar-container">
+              <div className="browser-history-search-icon-container">
+                  <img className="browser-history-search-icon-img" src="https://assets.ccbp.in/frontend/react-js/search-img.png" alt="search" />
+              </div>
+              <input type="search" className="browser-history-search-input" placeholder="Search History" name="search-input" value={browserHistorySearchString} onChange={this.onBrowserHistorySearchInputChange} />
+          </div>
+        </div>
+        <div className="browser-history-content-container">
+          {searchSpecificBrowserHistoryItemList.length === 0 ? (
+            <h1 className="browser-history-empty-content-text">
+              There is no history to show
+            </h1>
+          ) : (
+            <ul className="browser-history-items-container">
+              {searchSpecificBrowserHistoryItemList.map(
+                currentBrowserHistoryItem => {
+                  const {
+                    id,
+                    timeAccessed,
+                    logoUrl,
+                    title,
+                    domainUrl,
+                  } = currentBrowserHistoryItem
+
+                  return (
+                    <li
+                      key={id}
+                      className="browser-history-single-item-container"
+                    >
+                      <p className="browser-history-item-log-time">
+                        {timeAccessed}
+                      </p>
+                      <div className="browser-history-item-data-and-action-container">
+                        <div className="browser-history-item-data-container">
+                          <img
+                            className="browser-history-item-domain-logo"
+                            src={logoUrl}
+                            alt="domain logo"
+                          />
+                          <div className="browser-history-item-domain-details-container">
+                            <p className="browser-history-item-domain-title">
+                              {title}
+                            </p>
+                            <p className="browser-history-item-domain-name">
+                              {domainUrl}
+                            </p>
+                          </div>
+                        </div>
+                        <button
+                          type="button"
+                          id={id}
+                          className="browser-history-item-delete-action-container"
+                          onClick={this.onBrowserHistoryItemDeleteAction}
+                        >
+                          <img
+                            className="browser-history-item-delete-icon-img"
+                            src="https://assets.ccbp.in/frontend/react-js/delete-img.png"
+                            alt="delete"
+                          />
+                        </button>
+                      </div>
+                    </li>
+                  )
+                },
+              )}
+            </ul>
+          )}
+        </div>
+      </div>
+    )
+  }
+}
