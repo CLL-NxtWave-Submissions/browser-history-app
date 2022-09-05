@@ -23,32 +23,33 @@ body {
 
 .browser-history-search-container {
   background-color: #3367d6;
-  height: 15vh;
+  height: 12vh;
   margin: 0;
   width: 100%;
-  padding: 1rem 4rem;
+  padding: 1rem 2rem;
   display: flex;
   align-items: center;
   font-family: 'Roboto';
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .browser-history-logo-container {
-  margin-right: 18rem;
+  margin-right: 4rem;
 }
 
 .browser-history-logo-img {
-  height: 3rem;
-  width: 10rem;
+  height: 1.8rem;
+  width: 7rem;
 }
 
 .browser-history-search-bar-container {
   display: flex;
   align-items: center;
   border-radius: 0.4rem;
-  border: none;
+  border: 0.1rem solid #6697ff;
   background-color: #2850a7;
   padding: 0;
+  flex-grow: 1;
 }
 
 .browser-history-search-icon-container {
@@ -57,11 +58,12 @@ body {
   align-items: center;
   padding: 0.5rem;
   background: inherit;
-  border: 0.1rem solid #6697ff;
-  border-right: 0.05rem solid #6697ff;
+  border: none;
+  border-right: 0.1rem solid #6697ff;
   border-top-left-radius: 0.4rem;
   border-bottom-left-radius: 0.4rem;
   height: 100%;
+  margin: 0;
 }
 
 .browser-history-search-icon-img {
@@ -71,11 +73,9 @@ body {
 
 .browser-history-search-input {
   background: inherit;
-  padding: 0.5rem;
+  padding: 0.5rem 0.75rem;
   color: #ffffff;
-  border: 0.1rem solid #6697ff;
-  border-left: -1px;
-  border-left-width: 0.05rem;
+  border: none;
   border-top-right-radius: 0.4rem;
   border-bottom-right-radius: 0.4rem;
   width: 100%;
@@ -85,7 +85,7 @@ body {
 }
 
 .browser-history-content-container {
-  height: 85vh;
+  height: 88vh;
   padding: 1rem 1.5rem;
   display: flex;
   justify-content: center;
