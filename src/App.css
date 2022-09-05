@@ -10,3 +10,151 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.browser-history-bg-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  max-height: 100%;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+}
+
+.browser-history-search-container {
+  background-color: #3367d6;
+  height: 25vh;
+  margin: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  font-family: 'Roboto';
+}
+
+.browser-history-header {
+  color: #f8fafc;
+  font-size: 2rem;
+  margin-right: 3rem;
+}
+
+.browser-history-search-bar-container {
+  display: flex;
+  align-items: center;
+  border-radius: 0.4rem;
+  border: none;
+  background-color: #2850a7;
+  padding: 0;
+}
+
+.browser-history-search-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background: inherit;
+  border: 0.1rem solid #6697ff;
+  border-right: 0.05rem solid #6697ff;
+  border-top-left-radius: 0.4rem;
+  border-bottom-left-radius: 0.4rem;
+}
+
+.browser-history-search-icon-img {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.browser-history-search-input {
+  background: inherit;
+  padding: 1.5rem;
+  color: #ffffff;
+  border: 0.1rem solid #6697ff;
+  border-left: -1px;
+  border-left-width: 0.05rem;
+  border-top-right-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+}
+
+.browser-history-content-container {
+  height: 75vh;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  font-family: 'Roboto';
+}
+
+.browser-history-empty-content-text {
+  color: #475569;
+  font-size: 1.5rem;
+}
+
+.browser-history-items-container {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 0.4rem;
+  box-shadow: 0 0 0.5rem #ececec;
+  display: flex;
+  flex-direction: column;
+}
+
+.browser-history-single-item-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.browser-history-item-log-time {
+  color: #475569;
+  font-size: 1.2rem;
+}
+
+.browser-history-item-data-and-action-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.browser-history-item-data-container {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.browser-history-item-domain-logo {
+  height: 2.5rem;
+  width: 2.5rem;
+  margin-right: 1.5rem;
+}
+
+.browser-history-item-domain-details-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.browser-history-item-domain-title {
+  color: #475569;
+  font-size: 1rem;
+}
+
+.browser-history-item-domain-name {
+  color: #64748b;
+  font-size: 0.8rem;
+}
+
+.browser-history-item-delete-action-container {
+  display: flex;
+  align-items: center;
+}
+
+.browser-history-item-delete-icon-img {
+  height: 1.2rem;
+  width: 1.2rem;
+}
