@@ -22,7 +22,7 @@ body {
 
 .browser-history-search-container {
   background-color: #3367d6;
-  height: 12vh;
+  height: 12%;
   margin: 0;
   width: 100%;
   padding: 1rem 2rem;
@@ -84,7 +84,7 @@ body {
 }
 
 .browser-history-content-container {
-  height: 88vh;
+  height: 88%;
   padding: 1rem 1.5rem;
   display: flex;
   flex-direction: column;
@@ -179,7 +179,7 @@ body {
 
 @media (min-width: 768px) {
   .browser-history-search-container {
-    height: 12vh;
+    height: 12%;
     margin: 0;
     width: 100vw;
     padding: 1rem 7rem;
@@ -232,7 +232,7 @@ body {
   }
 
   .browser-history-content-container {
-    height: 88vh;
+    height: 88%;
     padding: 1rem 1.5rem;
     width: 100%;
   }
