@@ -179,10 +179,10 @@ body {
 
 @media (min-width: 768px) {
   .browser-history-search-container {
-    height: 15vh;
+    height: 12vh;
     margin: 0;
-    width: 100%;
-    padding: 1rem 4rem;
+    width: 100vw;
+    padding: 1rem 7rem;
     margin-bottom: 2rem;
   }
 
@@ -191,52 +191,50 @@ body {
   }
 
   .browser-history-logo-img {
-    height: 3rem;
-    width: 10rem;
+    height: 2.5rem;
+    width: 9rem;
   }
 
   .browser-history-search-bar-container {
     border-radius: 0.4rem;
-    border: none;
+    border: 0.1rem solid #6697ff;
     padding: 0;
+    flex-grow: 0;
   }
 
   .browser-history-search-icon-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0.5rem;
+    padding: 0.75rem 1rem;
     background: inherit;
-    border: 0.1rem solid #6697ff;
-    border-right: 0.05rem solid #6697ff;
+    border: none;
+    border-right: 0.1rem solid #6697ff;
     border-top-left-radius: 0.4rem;
     border-bottom-left-radius: 0.4rem;
     height: 100%;
   }
 
   .browser-history-search-icon-img {
-    height: 1.5rem;
-    width: 1.5rem;
+    height: 1.8rem;
+    width: 1.8rem;
   }
 
   .browser-history-search-input {
     background: inherit;
-    padding: 0.5rem;
+    padding: 0.75rem;
     color: #ffffff;
-    border: 0.1rem solid #6697ff;
-    border-left: -1px;
-    border-left-width: 0.05rem;
-    border-top-right-radius: 0.4rem;
-    border-bottom-right-radius: 0.4rem;
-    width: 100%;
+    border: none;
+    width: 35rem;
     outline: none;
     font-size: 1rem;
     height: 100%;
   }
 
   .browser-history-content-container {
-    height: 85vh;
+    height: 88vh;
     padding: 1rem 1.5rem;
+    width: 100vw;
   }
 
   .browser-history-empty-content-text {
@@ -254,53 +252,60 @@ body {
 
   .browser-history-single-item-container {
     display: flex;
+    flex-direction: row;
     align-items: center;
     margin-bottom: 1.5rem;
   }
 
   .browser-history-item-log-time {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    width: 9rem;
   }
 
   .browser-history-item-data-and-action-container {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    flex-grow: 1;
   }
 
   .browser-history-item-data-container {
     display: flex;
-    align-items: center;
+    flex-direction: row;
     flex-grow: 1;
   }
 
   .browser-history-item-domain-logo {
-    height: 2.5rem;
-    width: 2.5rem;
-    margin-right: 1.5rem;
+    height: 1.7rem;
+    width: 1.7rem;
+    margin: 0.75rem;
   }
 
   .browser-history-item-domain-details-container {
     display: flex;
+    flex-direction: row;
     align-items: center;
   }
 
   .browser-history-item-domain-title {
     font-size: 1rem;
+    margin: 0.5rem;
+    margin-right: 0;
   }
 
   .browser-history-item-domain-name {
-    font-size: 0.8rem;
+    font-size: 1rem;
+    margin: 0.5rem;
   }
 
   .browser-history-item-delete-action-container {
     display: flex;
+    flex-direction: row;
     align-items: center;
   }
 
   .browser-history-item-delete-icon-img {
-    height: 1.2rem;
-    width: 1.2rem;
+    height: 1.5rem;
+    width: 1.5rem;
   }
 }
